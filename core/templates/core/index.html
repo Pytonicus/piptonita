@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang = "es">
+    <head>
+        <meta charset = "utf-8">
+        <title>Piptonita - El mundo del código, los videojuegos y la cultura maker</title>
+        <meta name = "description" content = "Piptonita es un sitio web dedicado a la formación en materia de programación, creación de videojuegos y software en general, además de trabajar el ámbito maker">
+        <meta name = "author" content = "Guillermo Granados Gómez - Wise Fox">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    </head>
+    <body>
+        <div class="preloader" id="preload">
+            <span></span>
+        </div>
+        <header>
+            <h1>PIPTONITA</h1>
+        </header>
+        <nav class="nav-computer">
+            <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
+            <a href="#">Tutoriales</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Cursos</a>
+        </nav>
+        <nav class="mobile-nav">
+            <aside id="mobile-menu" class="mobile-menu mobile-menu-close">
+                <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
+                <a href="#">Tutoriales</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Cursos</a>
+            </aside>
+            <div id="button-menu" class="button-menu">
+                <span id="menu-open" class="menu-open"><p>Menú</p></span>
+                <span id="menu-close" class="menu-close"><p>Volver</p></span>
+            </div>
+            <span class="title">
+                <h2>PIPTONITA</h2>
+            </span>
+        </nav>
+        <article>
+            <br>
+            {% block article %}{% endblock %}
+        </article>
+        <footer>
+            <section id="sitios">
+                <h3>Piptoredes</h3>
+                <div class="footer-nav">
+                    <a href="https://piptocode.github.io">Piptocode</a>
+                    <a href="https://github.com/Piptonita">GitHub</a>
+                </div>
+            </section>
+            <section id="sobre">
+                <h3>EL AUTOR</h3>
+                <span class="foto">
+                    <img src="{% static 'core/img/yo.jpeg'%}" alt="Foto personal">
+                </span>
+                <p>Desarrollador Django y amante del software libre, el mundo maker y los videojuegos clásicos. He creado este sitio web con el propósito de compartir de forma libre mis conocimientos en Ciencias de la Computación.</p>
+                <a href="https://github">sitio web</a>
+            </section>
+            <section id="mapa">
+                <h3>Piptonita</h3>
+                <div class="footer-nav">
+                    <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}footer-selected{% endif %}">Blog</a>
+                    <a href="#">Tutoriales</a>
+                    <a href="#">Proyectos</a>
+                    <a href="#">Cursos</a>
+                </div>
+            </section>
+            <section id="licencia">
+            </section>
+        </footer>
+        <script src="{% static 'core/js/main.js' %}"></script>
+    </body>
+</html>

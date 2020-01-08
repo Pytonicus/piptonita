@@ -1,0 +1,54 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block article %}
+    <section>
+        <h2>Blog</h2>
+        <br>
+        {% for entrada in entrada_list %}
+            <div class="entrada">
+                <h3>{{ entrada.titulo }}</h3>
+                <span class="detalle"></span>
+                <div class="row">
+                    <div class="column-s">
+                        <span class="imagen">
+                            {% if entrada.imagen %}
+                                <img src="{{ entrada.imagen.url }}" alt="Imagen de {{ entrada.titulo }}">
+                            {% else %}
+                                <span class="no-imagen"><p>P</p></span>
+                            {% endif %}
+                        </span>
+                        <p class="categoria">{{ entrada.categoria }}</p>
+                        <small>Por: {{ entrada.autor }}</small>
+                        <small>{{ entrada.fecha_creacion }}</small>
+                    </div>
+                    <div class="column-l">
+                        <p>{{ entrada.contenido | linebreaks}}</p>
+                        <span class="boton"><a href="{{entrada.enlace}}">Ir al sitio</a></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        {% endfor %}        
+    </section>
+    {% if is_paginated %}
+        <div class="paginator">
+            <div class="paginate">
+                {% if page_obj.has_previous %}
+                <a href="?page={{page_obj.previous_page_number}}">
+                    <span>Anterior</span> 
+                </a>
+                {% endif %}
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+                {% if page_obj.has_next %}
+                    <a href="?page={{page_obj.next_page_number}}">
+                        <span>Siguiente</span> 
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    <br>
+    <br>
+{% endblock %}
