@@ -175,11 +175,6 @@ footer section h3 {
     color: #F5EFED;
 }
 
-.footer .licencia{
-    position: relative!important;
-    bottom: 0;
-}
-
 .foto{
     display: flex;
     justify-content:center;
@@ -188,6 +183,7 @@ footer section h3 {
 .foto img{
     width: 100px;
     border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
     text-align: center;
     border: 5px solid #901C3A;
     box-shadow: 0px 0px 20px #901C3A;

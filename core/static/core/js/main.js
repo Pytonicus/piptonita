@@ -16,11 +16,6 @@ class Preloader{
     }
 }
 
-var preloader = document.getElementById('preload');
-window.addEventListener('load', ()=>{
-    preloader.style.display = 'none';
-});
-
 class Menu{
     menu = "";
     menuOpen = "";
@@ -53,5 +48,5 @@ class Menu{
 }
 
 /* OBJETOS */
-var load = new Preloader();
+//var load = new Preloader();
 var menu = new Menu();
