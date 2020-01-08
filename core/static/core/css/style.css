@@ -175,6 +175,11 @@ footer section h3 {
     color: #F5EFED;
 }
 
+.footer .licencia{
+    position: relative!important;
+    bottom: 0;
+}
+
 .foto{
     display: flex;
     justify-content:center;
