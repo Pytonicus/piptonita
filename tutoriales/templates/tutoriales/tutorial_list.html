@@ -1,0 +1,44 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block article %}
+    <section>
+        <h2>Tutoriales</h2>
+        <br>
+        <div class="tutoriales">
+            {% for tutorial in tutorial_list %}
+                <div class="tarjeta-tutorial">
+                    <div class="imagen-tutorial">
+                        <img src="{{ tutorial.imagen.url }}" alt="{{tutorial.nombre}}">
+                    </div>
+                    <h3>{{ tutorial.nombre }}</h3>
+                    <p> {{ tutorial.descripcion }}</p>
+                    <br>
+                    <div class="boton">
+                        <a href="{% url 'tutorial' tutorial.pk %}">Ver Tutorial</a>
+                    </div>
+                </div>
+            {% endfor %}        
+        </div>
+        <br>
+    </section>
+    {% if is_paginated %}
+        <div class="paginator">
+            <div class="paginate">
+                {% if page_obj.has_previous %}
+                <a href="?page={{page_obj.previous_page_number}}">
+                    <span>Anterior</span> 
+                </a>
+                {% endif %}
+                {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+                {% if page_obj.has_next %}
+                    <a href="?page={{page_obj.next_page_number}}">
+                        <span>Siguiente</span> 
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    <br>
+    <br>
+{% endblock %}

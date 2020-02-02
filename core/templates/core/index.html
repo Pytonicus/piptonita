@@ -21,14 +21,14 @@
         </header>
         <nav class="nav-computer">
             <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
-            <a href="#">Tutoriales</a>
+            <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
             <a href="#">Proyectos</a>
             <a href="#">Cursos</a>
         </nav>
         <nav class="mobile-nav">
             <aside id="mobile-menu" class="mobile-menu mobile-menu-close">
                 <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
-                <a href="#">Tutoriales</a>
+                <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
                 <a href="#">Proyectos</a>
                 <a href="#">Cursos</a>
             </aside>
@@ -64,12 +64,15 @@
                 <h3>Piptonita</h3>
                 <div class="footer-nav">
                     <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}footer-selected{% endif %}">Blog</a>
-                    <a href="#">Tutoriales</a>
+                    <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
                     <a href="#">Proyectos</a>
                     <a href="#">Cursos</a>
                 </div>
             </section>
         </footer>
+        <section id="licencia">
+            <small>© 2020 Piptonita, este sitio esta bajo licencia MIT.</small>
+        </section>
         <script src="{% static 'core/js/main.js' %}"></script>
     </body>
 </html>
