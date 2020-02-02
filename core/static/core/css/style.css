@@ -354,6 +354,8 @@ small{
     width: 290px;
     border-radius: 3px;
     text-align: center;
+    position: relative; /* Para que el botón se encaje al final el contenedor va relativo */
+    min-height: 350px;
 }
 
 .imagen-tutorial{
@@ -371,6 +373,11 @@ small{
 
 .tarjeta-tutorial .boton{
     text-align: center;
+    /* Y el botón tiene que ir absoluto con las posiciones a 0 */
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 /* Tutorial */
