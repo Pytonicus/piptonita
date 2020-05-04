@@ -210,6 +210,14 @@ footer {
         transition: 0.5s;
     }
 
+#licencia{
+    text-align: center;
+}
+
+    #licencia small{
+        color: #0A100D;
+        text-align: center;
+    }
 /* BLOG */
 
 .entrada {
@@ -422,6 +430,57 @@ small{
             text-align:center;
         }
 
+/* PROYECTOS  */
+.row_column{
+    border: 0;
+    box-shadow: none;
+}
+    .listado{
+        width: 32%;
+        border-right: 2px solid #0A100D;
+        box-shadow: 2px 0px 3px #818D92;
+        background: rgba(255,255,190,0.5);
+    }
+
+        .listado ul{
+            list-style-type: decimal;
+        }
+
+            .listado h3, .listado ul li a{
+                padding-left: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                color: #0A100D;
+            }
+                .listado ul li a:hover{
+                    color: #C51D4A;
+                    font-size: 18px;
+                    transition: 0.5s;
+                }
+
+    .proyectos{
+        width: 100%;
+    }
+    
+    .video-proyecto iframe{
+        width: 654px;
+        height: 367px;
+        margin: 0px 60px;
+    }
+
+/* Cursos */
+.imagen-curso{
+    text-align: center;
+    
+}
+    .imagen-curso img{
+        width: 250px;
+    }
+
+.boton-curso{
+    text-align: center;
+}
+
 /* TABLET */
 @media screen and (max-width: 1024px){
     .nav-computer, article, footer{
@@ -431,6 +490,12 @@ small{
     iframe{
         width: 560px;
         height: 315px;
+    }
+
+    .video-proyecto iframe{
+        width: 504px;
+        height: 317px;
+        margin: 0px 20px;
     }
 }
 
@@ -545,8 +610,14 @@ small{
         font-size: 16px;
     }
 
-    #licencia small{
+    #licencia{
+        text-align: center;
         background: #0A100D;
+        border-radius: 0px 0px 130px 130px;
+    }
+
+    #licencia small{
+        margin: 0 auto;
         color: #F5EFED;
         text-align: center;
     }
@@ -615,6 +686,21 @@ small{
         display:flex;
         justify-content: center;
         margin: 0;
+    }
+
+    /* PROYECTOS */
+    .listado{
+        width: 100%;
+    }
+
+    .video-proyecto{
+        padding-left: 5%;
+    }
+
+    .video-proyecto iframe{
+        width: 354px;
+        height: 167px;
+        margin: 0px 0px;
     }
 
 }

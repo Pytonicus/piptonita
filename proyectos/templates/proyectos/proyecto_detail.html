@@ -1,0 +1,41 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block article %}
+    <section>
+        <div class = "row row_column">
+            <div class = "listado">
+                <h3>Pasos a seguir</h3>
+                <ul>
+                    {% for capitulo in capitulos %}
+                        <li><a href="{% url 'paso' capitulo.pk %}">{{capitulo.paso}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class = "tutoriales proyectos">
+                <h3 class="titulo-articulo">{{paso.paso}}</h3>
+                <br>
+                <div class="video video-proyecto">
+                    <iframe width="560" height="315" src="{{paso.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <div class="transcripcion">
+                    <h4>Transcripción</h4>
+                    {{ paso.transcripcion | linebreaks }}
+                </div>
+                <div class="apartado-descarga">
+                    <div class="descarga">
+                        <p>Descargar la versión PDF</p>
+                        <br>
+                        <div class="boton">
+                            <a href="{{paso.pdf.url}}" target="_blank">DESCARGAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+{% endblock %}

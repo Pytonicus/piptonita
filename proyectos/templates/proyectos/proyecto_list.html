@@ -1,0 +1,54 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block article %}
+    <section>
+        <h2>Proyectos</h2>
+        <br>
+        <div class="row row_column">
+            <div class="listado">
+                <h3>Tipo de proyecto</h3>
+                <ul>
+                {% for tecnologia in tecnologias %}
+                    <li><a href="{% url 'categoria' tecnologia.pk %}">{{tecnologia.nombre}}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="tutoriales proyectos">
+                {% for proyecto in proyectos %}
+                    <div class="tarjeta-tutorial">
+                        <div class="imagen-tutorial">
+                            <img src="{{ proyecto.imagen.url }}" alt="{{proyecto.nombre}}">
+                        </div>
+                        <h3>{{ proyecto.nombre }}</h3>
+                        <p> {{ proyecto.descripcion }}</p>
+                        <br>
+                        <div class="boton">
+                            <a href="{% url 'proyecto' proyecto.pk %}">Ver proyecto</a>
+                        </div>
+                    </div>
+                {% endfor %}        
+            </div>
+        </div>
+        <br>
+    </section>
+    {% if is_paginated %}
+        <div class="paginator">
+            <div class="paginate">
+                {% if page_obj.has_previous %}
+                <a href="?page={{page_obj.previous_page_number}}">
+                    <span>Anterior</span> 
+                </a>
+                {% endif %}
+                {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+                {% if page_obj.has_next %}
+                    <a href="?page={{page_obj.next_page_number}}">
+                        <span>Siguiente</span> 
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    <br>
+    <br>
+{% endblock %}

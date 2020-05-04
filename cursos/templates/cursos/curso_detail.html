@@ -1,0 +1,33 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block article %}
+    <section>
+        <h3 class="titulo-articulo">{{curso.nombre_curso}}</h3>
+        <br>
+        <div class="imagen-curso">
+            <img src="{{curso.imagen_curso.url}}" alt="{{curso.nombre_curso}}">
+        </div>
+        <br>
+        <div class="transcripcion">
+            <h4>Detalles</h4>
+            <ul>
+                <li><b>Horario:</b> {{curso.horario}}</li>
+                <li><b>Precio Total:</b> {{curso.precio}}</li>
+                <li><b>Requisitos:</b> {{curso.requisitos}}</li>
+                <li><b>Fecha de Comienzo:</b> {{curso.fecha_inicio}}</li>
+            </ul>
+            <h4>Descripción</h4>
+            {{ curso.descripcion | linebreaks }}
+            <br>
+            <p><b>Inscríbete y pruébalo, las dos primeras clases son gratis y sin compromiso</b></li>
+            
+            <div class="boton boton-curso">
+                <a href="" >Inscríbete</a>
+            </div>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+{% endblock %}
