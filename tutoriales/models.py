@@ -11,11 +11,11 @@ class Tutorial(models.Model):
     fecha_creacion = models.DateField(auto_now_add=True, verbose_name="Fecha de Creación")
     fecha_edicion = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")
 
+
     class Meta:
         verbose_name="Tutorial"
         verbose_name_plural="Tutoriales"
         ordering=["-fecha_creacion"]
-    
+
     def __str__(self):
         return self.nombre
-    

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, verbose_name="Categoría")
 
@@ -15,7 +16,7 @@ class Categoria(models.Model):
         return self.nombre
 
 class Entrada(models.Model):
-    titulo = models.CharField(max_length=100, verbose_name="Título")
+    titulo = models.CharField(max_length=100, unique=True, verbose_name="Título")
     autor = models.ForeignKey("auth.User", on_delete=models.CASCADE, verbose_name="Autor")
     imagen = models.ImageField(upload_to="entradas/", blank=True)
     contenido = models.TextField(verbose_name="Contenido")
@@ -24,7 +25,7 @@ class Entrada(models.Model):
 
     fecha_creacion = models.DateField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
-
+    
     class Meta:
         verbose_name = "Entrada"
         verbose_name_plural = "Entradas"
