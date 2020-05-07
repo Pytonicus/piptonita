@@ -35,6 +35,9 @@ class Menu{
             this.menu.classList.remove("mobile-menu-close");
             this.menuOpen.style.display = 'none';
             this.menuClose.style.display = 'flex';
+            window.setTimeout(()=>{
+                this.menu.classList.add('mobile-menu-show');
+            },500);
         });
     }
 

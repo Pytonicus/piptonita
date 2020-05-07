@@ -19,6 +19,7 @@ font-family: 'Luckiest Guy', cursive;
 body{
     background: linear-gradient(90deg, #901C3A 30%, #C51D4A 100%);
     font-family: 'Roboto', sans-serif;
+    animation: colores 5s infinite alternate;
 }
 
 /* PRELOADER */
@@ -544,9 +545,23 @@ small{
         height: 100%;
         width: 60%;
         background: #F5EFED;
-        box-shadow: 80px 50px 100px #818D92;
-        transform-origin: 0%;
-        transition: all 0.5s ease-out;
+        transform: translateX(-260px);
+        animation: launchMenu 0.5s;
+    }
+
+    @keyframes launchMenu {
+        from{
+            transform: translateX(-260px);
+            box-shadow: 0px 0px 0px RGBA(0,0,0,0.0);
+        }to{
+            transform: translateX(0px);
+            box-shadow: 46px 0px 30px RGBA(0,0,0,0.5);
+        }
+    }
+
+    .mobile-menu-show{
+        transform: translateX(0px);
+        box-shadow: 46px 0px 30px RGBA(0,0,0,0.5);
     }
 
     .mobile-menu-close{
