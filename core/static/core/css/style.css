@@ -176,6 +176,11 @@ footer {
         color: #F5EFED;
     }
 
+.redes a i{
+    font-size: 26px;
+    padding: 0px 10px;
+}
+
 .foto{
     display: flex;
     justify-content:center;

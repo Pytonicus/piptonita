@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, verbose_name="Tecnología")
@@ -29,6 +30,9 @@ class Proyecto(models.Model):
     
     def __str__(self):
         return self.nombre
+
+    def get_absolute_url(self):
+        return reverse('proyecto', kwargs={'pk': self.pk})
 
 class Capitulo(models.Model):
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE, verbose_name="Proyecto")

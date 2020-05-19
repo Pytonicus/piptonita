@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Curso(models.Model):
     nombre_curso = models.CharField(max_length=200, verbose_name="Nombre del curso")
@@ -17,6 +18,9 @@ class Curso(models.Model):
 
     def __str__(self):
         return self.nombre_curso
+
+    def get_absolute_url(self):
+        return reverse('curso', kwargs={'pk':self.pk})
 
 class Alumno(models.Model):
     nombre_alumno = models.CharField(max_length=200, verbose_name="Nombre del Alumno")
