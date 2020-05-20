@@ -4,10 +4,12 @@ from django.urls import reverse
 class Curso(models.Model):
     nombre_curso = models.CharField(max_length=200, verbose_name="Nombre del curso")
     imagen_curso = models.ImageField(upload_to="cursos/imagenes/", verbose_name="Imagen del curso")
+    resumen = models.CharField(max_length=200, verbose_name="Resumen")
     horario = models.CharField(max_length=200, verbose_name="Horario del curso")
     precio = models.CharField(max_length=50, verbose_name="Precio del curso")
     requisitos = models.CharField(max_length=200, verbose_name="Requisitos")
     descripcion = models.TextField(verbose_name="Descripción")
+    link_canal = models.URLField(verbose_name="Enlace al curso")
     fecha_inicio = models.DateField(verbose_name="Fecha de inicio")
     fecha_entrada = models.DateTimeField(auto_now=True, verbose_name="Añadido el")
 

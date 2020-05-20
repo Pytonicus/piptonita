@@ -159,6 +159,10 @@ footer {
     padding-left: 30%;
 }
 
+    .socialLinks{
+        padding-left: 22%;
+    }
+
     .footer-selected, .footer-nav a:hover{
         color: #C51D4A !important;
         font-size: 22px;

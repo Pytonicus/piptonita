@@ -12,7 +12,7 @@
                         <img src="{{ curso.imagen_curso.url }}" alt="{{curso.nombre_curso}}">
                     </div>
                     <h3>{{ curso.nombre_curso }}</h3>
-                    <p> {{ curso.descripcion }}</p>
+                    <p> {{ curso.resumen }}</p>
                     <br>
                     <div class="boton">
                         <a href="{% url 'curso' curso.pk %}">Detalles del curso</a>
