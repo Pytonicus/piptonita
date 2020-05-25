@@ -602,7 +602,7 @@ small{
         font-family: 'Luckiest Guy', cursive;
         text-decoration: none;
         color: #0A100D;
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .selected{
@@ -632,7 +632,7 @@ small{
     }
 
     .footer-nav a{
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #licencia{
