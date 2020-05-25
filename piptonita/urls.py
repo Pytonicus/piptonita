@@ -20,6 +20,10 @@ from django.contrib.sitemaps.views import sitemap
 from core.sitemaps import StaticViewSitemap, TutorialSitemap, ProyectoSitemap, CursoSitemap
 from core import views
 from django.views.generic.base import TemplateView
+from django.conf.urls import handler404
+from core.views import mi_error_404
+
+handler404 = mi_error_404
 
 sitemaps = {
     'static': StaticViewSitemap,

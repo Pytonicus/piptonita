@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang = "es">
+    <head>
+        <meta charset = "utf-8">
+        <title>Piptonita - El mundo del código, los videojuegos y la cultura maker</title>
+        <meta name = "description" content = "Sitio web dedicado a la formación en materia de programación, creación de videojuegos y software en general, además de trabajar el ámbito maker">
+        <meta name="keywords" content="python, php, javascript, c, c++, c#, arduino, proyectos, DIY, aprende a programar, desarrollo de software, fundamentos de programación, tutoriales">
+        <meta name = "author" content = "Guillermo Granados Gómez - Wise Fox">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'core/css/style.min.css' %}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'android-icon-192x192.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicon-96x96.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'manifest.json' %}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{% static 'ms-icon-144x144.png' %}">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165471906-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-165471906-1');
+        </script>
+
+    </head>
+    <body>
+        <header style="display:flex; justify-content:center; align-items:center;">
+            <h1>PIPTONITA</h1>
+        </header>
+    </body>
+</html>
