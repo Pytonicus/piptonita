@@ -1,0 +1,5 @@
+Sitemap: https://piptonita.pythonanywhere.com/sitemap.xml
+User-Agent: *
+Disallow: /admin/
+
+

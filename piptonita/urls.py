@@ -18,6 +18,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from core.sitemaps import StaticViewSitemap, TutorialSitemap, ProyectoSitemap, CursoSitemap
+from core import views
+from django.views.generic.base import TemplateView
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -33,7 +35,8 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('tutoriales/', include('tutoriales.urls')),
     path('proyectos/', include('proyectos.urls')),
-    path('cursos/', include('cursos.urls'))
+    path('cursos/', include('cursos.urls')),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
 
 if settings.DEBUG:
