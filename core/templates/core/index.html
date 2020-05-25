@@ -25,21 +25,25 @@
             <meta property="og:title" content="{{curso.nombre_curso}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{curso.imagen_curso.url}}" />
+            <meta property="og:description" content="{{curso.resumen}}">
         {% elif paso %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="{{paso.paso}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{capitulo.imagen.url}}" />
+            <meta property="og:description" content="{{capitulo.descripcion}}">
         {% elif tutorial %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="{{tutorial.nombre}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{tutorial.imagen.url}}" />
+            <meta property="og:description" content="{{tutorial.descripcion}}">
         {% else %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="Piptonita - El mundo del código, los videojuegos y la cultura maker" />
-            <meta property="og:url" content="{{ request.path }}" />
+            <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com/media/entradas/curso_html2.png" />
+            <meta property="og:description" content="Sitio web dedicado a la formación en materia de programación, creación de videojuegos y software en general, además de trabajar el ámbito maker">
         {% endif %}
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
