@@ -19,6 +19,23 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{% static 'ms-icon-144x144.png' %}">
         <meta name="theme-color" content="#ffffff">
+        <!-- Open Grapth tags -->
+        {% if curso %}
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="https://piptonita.pythonanywhere.com{{curso.nombre_curso}}" />
+            <meta property="og:url" content="{{ request.path }}" />
+            <meta property="og:image" content="https://piptonita.pythonanywhere.com{{curso.imagen_curso.url}}" />
+        {% elif paso %}
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="{{paso.paso}}" />
+            <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
+            <meta property="og:image" content="https://piptonita.pythonanywhere.com{{capitulo.imagen.url}}" />
+        {% elif tutorial %}
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="{{tutorial.nombre}}" />
+            <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
+            <meta property="og:image" content="https://piptonita.pythonanywhere.com{{tutorial.imagen.url}}" />
+        {% endif %}
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165471906-1"></script>
