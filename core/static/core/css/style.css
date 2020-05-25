@@ -377,6 +377,14 @@ small{
     min-height: 350px;
 }
 
+    .tarjeta-tutorial h3 {
+        font-size: 16px;
+    }
+    .tarjeta-tutorial p {
+        font-size: 15px;
+        padding: 0px 5px;
+    }
+
 .imagen-tutorial{
     width: 270px;
     height: 160px;
