@@ -492,8 +492,10 @@ small{
     text-align: center;
     
 }
-    .imagen-curso img{
-        width: 250px;
+    .imagen-curso img {
+        width: 50%;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px;
     }
 
 .boton-curso{

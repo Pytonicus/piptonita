@@ -19,31 +19,59 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{% static 'ms-icon-144x144.png' %}">
         <meta name="theme-color" content="#ffffff">
-        <!-- Open Grapth tags -->
+        <!-- Open Grapth tags & meta twitter cards -->
         {% if curso %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="{{curso.nombre_curso}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{curso.imagen_curso.url}}" />
             <meta property="og:description" content="{{curso.resumen}}">
+
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@piptonita">
+            <meta name="twitter:url" content="https://piptonita.pythonanywhere.com{{ request.path }}">
+            <meta name="twitter:title" content="{{curso.nombre_curso}}">
+            <meta name="twitter:description" content="{{curso.resumen}}">
+            <meta name="twitter:image" content="https://piptonita.pythonanywhere.com{{curso.imagen_curso.url}}">
         {% elif paso %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="{{paso.paso}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{capitulo.imagen.url}}" />
             <meta property="og:description" content="{{capitulo.descripcion}}">
+
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@piptonita">
+            <meta name="twitter:url" content="https://piptonita.pythonanywhere.com{{ request.path }}">
+            <meta name="twitter:title" content="{{paso.paso}}">
+            <meta name="twitter:description" content="{{capitulo.descripcion}}">
+            <meta name="twitter:image" content="https://piptonita.pythonanywhere.com{{capitulo.imagen.url}}">
         {% elif tutorial %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="{{tutorial.nombre}}" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{tutorial.imagen.url}}" />
             <meta property="og:description" content="{{tutorial.descripcion}}">
+
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@piptonita">
+            <meta name="twitter:url" content="https://piptonita.pythonanywhere.com{{ request.path }}">
+            <meta name="twitter:title" content="{{tutorial.nombre}}">
+            <meta name="twitter:description" content="{{tutorial.descripcion}}">
+            <meta name="twitter:image" content="https://piptonita.pythonanywhere.com{{tutorial.imagen.url}}">
         {% else %}
             <meta property="og:type" content="article" />
             <meta property="og:title" content="Piptonita - El mundo del código, los videojuegos y la cultura maker" />
             <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com/media/entradas/curso_html2.png" />
             <meta property="og:description" content="Sitio web dedicado a la formación en materia de programación, creación de videojuegos y software en general, además de trabajar el ámbito maker">
+        
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@piptonita">
+            <meta name="twitter:url" content="https://piptonita.pythonanywhere.com{{ request.path }}">
+            <meta name="twitter:title" content="Piptonita - El mundo del código, los videojuegos y la cultura maker">
+            <meta name="twitter:description" content="Sitio web dedicado a la formación en materia de programación, creación de videojuegos y software en general, además de trabajar el ámbito maker">
+            <meta name="twitter:image" content="https://piptonita.pythonanywhere.com/media/entradas/curso_html2.png">
         {% endif %}
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
