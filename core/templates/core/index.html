@@ -20,10 +20,14 @@
         <meta name="msapplication-TileImage" content="{% static 'ms-icon-144x144.png' %}">
         <meta name="theme-color" content="#ffffff">
         <!-- Open Grapth tags -->
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="Piptonita - El mundo del código, los videojuegos y la cultura maker" />
+            <meta property="og:url" content="{{ request.path }}" />
+            <meta property="og:image" content="https://piptonita.pythonanywhere.com/media/entradas/curso_html2.png" />
         {% if curso %}
             <meta property="og:type" content="article" />
-            <meta property="og:title" content="https://piptonita.pythonanywhere.com{{curso.nombre_curso}}" />
-            <meta property="og:url" content="{{ request.path }}" />
+            <meta property="og:title" content="{{curso.nombre_curso}}" />
+            <meta property="og:url" content="https://piptonita.pythonanywhere.com{{ request.path }}" />
             <meta property="og:image" content="https://piptonita.pythonanywhere.com{{curso.imagen_curso.url}}" />
         {% elif paso %}
             <meta property="og:type" content="article" />
