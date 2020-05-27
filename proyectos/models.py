@@ -48,7 +48,7 @@ class Capitulo(models.Model):
     class Meta:
         verbose_name="Paso"
         verbose_name_plural="Pasos"
-        ordering = ["-paso"]
+        ordering = ["numero"]
     
     def __str__(self):
         return self.paso
