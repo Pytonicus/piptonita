@@ -463,6 +463,8 @@ small{
 
         .listado ul{
             list-style-type: decimal;
+            padding-left: 22px;
+            padding-right: 5px;
         }
 
             .listado h3, .listado ul li a{
