@@ -480,7 +480,6 @@ small{
                 }
                 .listado ul li a:hover{
                     color: #C51D4A;
-                    font-size: 16px;
                     transition: 0.5s;
                 }
                 .listado ul li a:visited{
