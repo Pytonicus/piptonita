@@ -129,7 +129,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, '../core/static') # ruta de nuestros archivos staticos
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static') # ruta de nuestros archivos staticos
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_USER = True
