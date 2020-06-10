@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, verbose_name="Tecnología")
@@ -39,7 +40,7 @@ class Capitulo(models.Model):
     paso = models.CharField(max_length=150, verbose_name="Paso")
     numero = models.IntegerField(verbose_name="Numero del paso")
     video = models.URLField(verbose_name="Ruta del video")
-    transcripcion = models.TextField(verbose_name="Transcripción")
+    transcripcion = RichTextField(verbose_name="Transcripción")
     pdf = models.FileField(upload_to="proyectos/pdfs/")
 
     fecha_creacion = models.DateField(auto_now=True, verbose_name="Fecha de creación")

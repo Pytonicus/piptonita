@@ -1,12 +1,14 @@
 from django.db import models
 from django.urls import reverse
+from ckeditor.fields import RichTextField
+
 
 class Tutorial(models.Model):
     nombre = models.CharField(max_length=100, verbose_name="Tutorial")
     imagen = models.ImageField(upload_to="tutoriales/imagenes/", verbose_name="Imagen")
     descripcion = models.CharField(max_length=200, verbose_name="Descripción")
     video = models.URLField(verbose_name="Video")
-    transcripcion = models.TextField(verbose_name="Transcripción")
+    transcripcion = RichTextField(verbose_name="Transcripción")
     archivoPdf = models.FileField(upload_to="tutoriales/pdfs/")
 
     fecha_creacion = models.DateField(auto_now_add=True, verbose_name="Fecha de Creación")

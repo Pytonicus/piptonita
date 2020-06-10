@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, verbose_name="Categoría")
 
@@ -19,7 +18,7 @@ class Entrada(models.Model):
     titulo = models.CharField(max_length=100, unique=True, verbose_name="Título")
     autor = models.ForeignKey("auth.User", on_delete=models.CASCADE, verbose_name="Autor")
     imagen = models.ImageField(upload_to="entradas/", blank=True)
-    contenido = models.TextField(verbose_name="Contenido")
+    contenido = models.TextField(verbose_name="Contenido", null=True, blank=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, verbose_name="Categoría")
     enlace = models.URLField(verbose_name="Enlace a entrada", blank=True)
 

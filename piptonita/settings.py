@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(ns!ch@z$8toet$eo1w2u_uflx6cnd!#udb=nqh)6girk)4+j$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.piptonita.es', 'piptonita.pythonanywhere.com']
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'ckeditor',
     'core',
     'blog',
     'tutoriales',
@@ -126,3 +127,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'core/static') # ruta de nuestros archivos staticos
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Advanced',
+        'width': 758,
+        'height': 300,
+    },
+}

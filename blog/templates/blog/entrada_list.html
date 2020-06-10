@@ -23,7 +23,7 @@
                         <small>{{ entrada.fecha_creacion }}</small>
                     </div>
                     <div class="column-l">
-                        <p>{{ entrada.contenido | linebreaks}}</p>
+                        <p>{{ entrada.contenido | safe}}</p>
                         {% if entrada.enlace %}<span class="boton"><a href="{{entrada.enlace}}">Ir al sitio</a></span>{% endif %}
                     </div>
                 </div>
