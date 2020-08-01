@@ -37,6 +37,7 @@ urlpatterns = [
     path('tutoriales/', include('tutoriales.urls')),
     path('proyectos/', include('proyectos.urls')),
     path('cursos/', include('cursos.urls')),
+    path('laboratorio/', include('laboratorio.urls')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

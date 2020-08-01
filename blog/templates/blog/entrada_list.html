@@ -3,7 +3,7 @@
 
 {% block article %}
     <section>
-        <h2>Blog</h2>
+        <h2>PiptoBlog: noticias y novedades</h2>
         <br>
         {% for entrada in entrada_list %}
             <div class="entrada">
@@ -23,7 +23,8 @@
                         <small>{{ entrada.fecha_creacion }}</small>
                     </div>
                     <div class="column-l">
-                        <p>{{ entrada.contenido | safe}}</p>
+                        <p>{{ entrada.contenido | linebreaks}}</p>
+                        <div class="separator"></div>
                         {% if entrada.enlace %}<span class="boton"><a href="{{entrada.enlace}}">Ir al sitio</a></span>{% endif %}
                     </div>
                 </div>

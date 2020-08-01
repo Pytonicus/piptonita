@@ -8,6 +8,7 @@
         <meta name="keywords" content="python, php, javascript, c, c++, c#, arduino, proyectos, DIY, aprende a programar, desarrollo de software, fundamentos de programación, tutoriales">
         <meta name = "author" content = "Guillermo Granados Gómez - Wise Fox">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#901C3A">
         <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'core/css/style.min.css' %}">
@@ -90,17 +91,19 @@
             <h1>PIPTONITA</h1>
         </header>
         <nav class="nav-computer">
-            <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
-            <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
-            <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">Proyectos</a>
-            <a href="{% url 'cursos'%}" class="{% if 'cursos' in url %}selected{% endif %}">Cursos</a>
+            <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">PiptoBlog</a>
+            <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">PiptoLearn</a>
+            <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">PiptoDo</a>
+            <a href="{% url 'eventos'%}" class="{% if 'laboratorio' in url %}selected{% endif %}">PiptoLab</a>
+            <a href="{% url 'cursos'%}" style="display:none" class="{% if 'cursos' in url %}selected{% endif %}">PiptoSchool</a>
         </nav>
         <nav class="mobile-nav">
             <aside id="mobile-menu" class="mobile-menu mobile-menu-close">
-                <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">Blog</a>
-                <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
-                <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">Proyectos</a>
-                <a href="{% url 'cursos' %}" class="{% if 'cursos' in url %}selected{% endif %}">Cursos</a>
+                <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}selected{% endif %}">PiptoBlog</a>
+                <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">PiptoLearn</a>
+                <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">PiptoDo</a>
+                <a href="{% url 'eventos'%}" class="{% if 'laboratorio' in url %}selected{% endif %}">PiptoLab</a>
+                <a href="{% url 'cursos'%}" style="display:none" class="{% if 'cursos' in url %}selected{% endif %}">PiptoSchool</a>
             </aside>
             <div id="button-menu" class="button-menu">
                 <span id="menu-open" class="menu-open"><p>Menú</p></span>
@@ -142,10 +145,11 @@
             <section id="mapa">
                 <h3>Piptonita</h3>
                 <div class="footer-nav">
-                    <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}footer-selected{% endif %}">Blog</a>
-                    <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">Tutoriales</a>
-                    <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">Proyectos</a>
-                    <a href="{% url 'cursos' %}" class="{% if 'cursos' in url %}selected{% endif %}">Cursos</a>
+                    <a id="blog" href="{% url 'blog' %}" class="{% if 'blog' in url %}footer-selected{% endif %}">PiptoBlog</a>
+                    <a href="{% url 'tutoriales' %}" class="{% if 'tutoriales' in url %}selected{% endif %}">PiptoLearn</a>
+                    <a href="{% url 'proyectos' %}" class="{% if 'proyectos' in url %}selected{% endif %}">PiptoDo</a>
+                    <a href="{% url 'eventos'%}" class="{% if 'laboratorio' in url %}selected{% endif %}">PiptoLab</a>
+                    <a href="{% url 'cursos'%}" style="display:none" class="{% if 'cursos' in url %}selected{% endif %}">PiptoSchool</a>
                 </div>
             </section>
         </footer>
