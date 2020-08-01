@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(ns!ch@z$8toet$eo1w2u_uflx6cnd!#udb=nqh)6girk)4+j$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.piptonita.com', 'piptonita.pythonanywhere.com']
 
